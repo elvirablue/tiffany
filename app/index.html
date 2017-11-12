@@ -13,15 +13,18 @@
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
 	<!-- Stiles -->
-	<link rel="stylesheet" href="bootstrap/css/bootstrap-3.3.2.min.css">	
-	<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css">	
-	<link rel="stylesheet" href="owlcarousel/owl.carousel.css">  
-  	<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
-  	<link rel="stylesheet" href="css/venders/jquery-ui.css">  
-	<link rel="stylesheet" href="css/venders/normalize.css">
-	<link rel="stylesheet" href="css/venders/animate.css">		
-	<link rel="stylesheet" href="css/style.css">	
-	<link rel="stylesheet" href="css/stylename.css">	
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-3.3.2.min.css">	
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css">	
+	<link rel="stylesheet" type="text/css" href="owlcarousel/owl.carousel.css">  
+	<link rel="stylesheet" type="text/css" href="owlcarousel/owl.theme.default.min.css">
+	  
+	<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css" media="screen">
+  	<link rel="stylesheet" type="text/css" href="css/venders/jquery-ui.css">  
+	<link rel="stylesheet" type="text/css" href="css/venders/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/venders/animate.css">		
+	<link rel="stylesheet" type="text/css" href="css/style.css">	
+	<link rel="stylesheet" type="text/css" href="css/stylename.css">
+
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&amp;subset=cyrillic-ext" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
@@ -31,6 +34,8 @@
 	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>	
 	<script type="text/javascript" src="owlcarousel/owl.carousel.min.js"></script>	
 	<script type="text/javascript" src="js/venders/jquery-ui.js"></script>	
+	
+	<script type="text/javascript" src="fancybox/jquery.fancybox.pack.js"></script>
 
 	<!--[if lte IE 9]>
 	    <script src="oldies/oldies.js" charset="utf-8"></script>
@@ -41,7 +46,7 @@
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar-main" data-offset="125">
 	<!-- **********************************************************************- -->
 
 <div class="wrapper-x">
@@ -50,12 +55,12 @@
 
 <!-- ***********************HEADER + NAVIGATION ********************************- -->
 
-<header id="mainup" class="navbar_wrapper">
+<header id="mainup" class="navbar_wrapper" >
 	<!--Фиксированное горизонтальное меню для навигации по текущей странице -->
   <nav class="navbar navbar-tf navbar-fixed-top">
 	<div class="container-fluid flex">
 	  	<div class="navbar-header navbar-flex">
-			<button type="button" class="navbar-toggle collapsed" data-spy="scroll" data-toggle="collapse" data-target="#navbar-main" aria-expanded="false">
+			<button type="button" class="navbar-toggle collapsed"  data-toggle="collapse" data-target="#navbar-main" aria-expanded="false">
 			  <span class="icon-bar"></span>
 			  <span class="icon-bar"></span>
 			  <span class="icon-bar"></span>
@@ -71,7 +76,7 @@
 	  	<div class="collapse navbar-collapse navbar-flex" id="navbar-main">
 	          <!-- Содержимое основной части --> 	      
 	    	<ul class="nav navbar-nav">			
-				<li><a href="#mainup">О нас?</a></li>				
+				<li><a href="#main">О нас?</a></li>				
 				<li><a href="#partners">Инструменты для бизнеса</a></li>
 				<li><a href="#calc">Калькулятор</a></li>				
 				<li><a href="#benefit">Поддержка</a></li>
@@ -106,7 +111,8 @@
 	</section>
 
 	<section id="" class="about">
-		<div class="container-fluid">
+		<img class="ball-1" src="img/ball-1.png" alt="">
+		<div class="container-fluid">			
 			<h2>TiFFANY NAiL BüRO
 				<span>современный салон маникюра в формате нейл-бюро, созданный в 2016 году в городе Псков.</span>
 			</h2>
@@ -125,11 +131,11 @@
 		</div>
 		<div id="owl-slider" class="slider">
 			<div id="owl-tiffany" class="owl-carousel">
-				<img src="img/photo-4.jpg" alt="">
-				<img src="img/photo-5.jpg" alt="">
-				<img src="img/photo-1.jpg" alt="">				
-				<img src="img/photo-2.jpg" alt="">
-				<img src="img/photo-3.jpg" alt="">				
+				<a rel="group" href="img/photo-4big.jpg"><img src="img/photo-4.jpg" alt=""></a>
+				<a rel="group" href="img/photo-5big.jpg"><img src="img/photo-5.jpg" alt=""></a>
+				<a rel="group" href="img/photo-1big.jpg"><img src="img/photo-1.jpg" alt=""></a>				
+				<a rel="group" href="img/photo-2big.jpg"><img src="img/photo-2.jpg" alt=""></a>
+				<a rel="group" href="img/photo-3big.jpg"><img src="img/photo-3.jpg" alt=""></a>				
 			</div>
 		</div>
 		<div class="container-fluid">				
@@ -163,6 +169,7 @@
 	</section>
 
 	<section id="partners" class="partners">
+		<img class="ball-2" src="img/ball-2.png" alt="">
 		<div class="container-fluid">
 			<img class="partners__img" src="img/ico/i-partner.png" alt="">
 			<h2>СТАНЬТЕ НАШИМ ПАРТНЕРОМ
@@ -231,6 +238,7 @@
 	<section id="calc" class="calc">
 		<div class="container-fluid">
 			<div class="calc__form">
+				<img class="ball-3" src="img/ball-3.png" alt="">
 				<img src="img/ico/i-calc.png" alt="">
 				<h2>Рассчитайте свою прибыль:</h2>
 				<div class="selector">											
@@ -296,6 +304,7 @@
 	</section>
 
 	<section id="benefit" class="benefit">
+		<img class="ball-4" src="img/ball-4.png" alt="">
 		<div class="container-fluid">
 			<h2>СТАВ НАШИМ ПАРТНЕРОМ
 				<span>Вы получите поддержку на&nbsp;всех этапах развития бизнеса</span>
@@ -360,7 +369,7 @@
 						<p class="benefit__title">Поддержка при открытии&nbsp;отдела</p>
 					</div>
 				</div>
-				<div class="col-xs-6 hidden-sm hidden-md">
+				<div class="col-xs-6 hidden-sm hidden-md hidden-lg">
 					<div class="benefit__item">
 						<img src="img/b-11.png" alt="">
 						<p class="benefit__title">Предоставление дизайн-проекта "Кабинет" для&nbsp;дальнейшего расширения&nbsp;бизнеса</p>
@@ -453,6 +462,14 @@
 		  <input type="text" class="hidden" value="Хочу купить">				
 	  </form>
   </div>
+  <div class="modal js-modal-end clearfix" style="position: fixed;" id="exampleModal">	  
+		<button class="modal_close" type="button">Закрыть</button>
+		<p class="modal__title">Спасибо за заявку!</p>
+		<p class="modal__text">Мы свяжемся с&nbsp;Вами в&nbsp;ближайшее&nbsp;время.</p>
+  </div>
+
+
+ 
 
 
 

@@ -973,6 +973,7 @@ a {
 .about {
   background-color: #e3fffe;
   padding-bottom: 75px;
+  position: relative;
 }
 @media (max-width: 767px) {
   .about {
@@ -1124,7 +1125,11 @@ a {
     margin-right: -400px;
   }
 }
+#owl-tiffany.owl-carousel .owl-nav {
+  display: block;
+}
 .partners {
+  position: relative;
   padding-top: 70px;
   text-align: center;
   background-position: center;
@@ -1257,6 +1262,7 @@ a {
   padding: 30px 0 0;
 }
 .calc__form {
+  position: relative;
   width: 100%;
   max-width: 1030px;
   margin: 0 auto;
@@ -1454,6 +1460,7 @@ a {
   border-radius: 4px;
 }
 .benefit {
+  position: relative;
   padding-top: 140px;
   background-image: url(../img/bg.png);
   background-position: top center;
@@ -1527,6 +1534,8 @@ a {
 .main-form .button {
   margin-top: 50px;
   margin-bottom: 35px;
+  position: relative;
+  z-index: 11;
 }
 @media (max-width: 767px) {
   .main-form .button {
@@ -1662,7 +1671,7 @@ a {
   letter-spacing: 0.5px;
   font-size: 14px;
   height: 54px;
-  padding: 20px 40px;
+  padding: 20px 10px;
 }
 @media (max-width: 767px) {
   .modal__form {
@@ -1672,14 +1681,26 @@ a {
 .modal__title {
   font-family: 'Roboto', sans-serif;
   font-size: 32px;
-  font-weight: 400;
+  font-weight: 300;
   padding: 60px 20px 20px;
   text-align: center;
-  font-weight: 300;
 }
 @media (max-width: 767px) {
   .modal__title {
     font-size: 20px;
+  }
+}
+.modal__text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 30px 20px 80px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .modal__text {
+    font-size: 14px;
+    padding: 20px 10px 50px;
   }
 }
 .form__subtitle {
@@ -1775,6 +1796,67 @@ a {
 }
 .modal.js-modal {
   z-index: 10100;
+}
+.ball-1 {
+  width: 335px;
+  height: 743px;
+  position: absolute;
+  z-index: 100;
+  top: -280px;
+  left: 50%;
+  -webkit-transform: translateX(-50vw);
+      -ms-transform: translateX(-50vw);
+          transform: translateX(-50vw);
+}
+@media (max-width: 1100px) {
+  .ball-1 {
+    display: none;
+  }
+}
+.ball-2 {
+  width: 164px;
+  height: 613px;
+  position: absolute;
+  z-index: 100;
+  top: -200px;
+  right: 50%;
+  -webkit-transform: translateX(50vw);
+      -ms-transform: translateX(50vw);
+          transform: translateX(50vw);
+}
+@media (max-width: 940px) {
+  .ball-2 {
+    display: none;
+  }
+}
+.ball-3 {
+  width: 475px;
+  height: 616px;
+  position: absolute;
+  z-index: 100;
+  bottom: -340px;
+  left: -290px;
+}
+@media (max-width: 768px) {
+  .ball-3 {
+    display: none;
+  }
+}
+.ball-4 {
+  width: 119px;
+  height: 420px;
+  position: absolute;
+  z-index: 100;
+  top: 100px;
+  right: 50%;
+  -webkit-transform: translateX(50vw);
+      -ms-transform: translateX(50vw);
+          transform: translateX(50vw);
+}
+@media (max-width: 940px) {
+  .ball-4 {
+    display: none;
+  }
 }
 .hidden {
   display: none;

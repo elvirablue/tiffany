@@ -1,15 +1,11 @@
   
 $(document).on('ready', function(){ 
-//******************модальные окна для форм**************************************************
-
-     
+//******************модальные окна для форм**************************************************    
   
    
     var popup_wrapper = document.querySelector('.modal_wrapper');
     var popup;
-    var close;
-
-    
+    var close;    
    
     $('.js-btn-modal').click(function(event){
       event.preventDefault();
@@ -20,8 +16,21 @@ $(document).on('ready', function(){
       popup.style.height = 'auto';         
       var heightModal = $('.js-modal').height();
       popup.style.marginTop = '-' + heightModal/2 + 'px';               
-      PopupShow(event);
-         
+      PopupShow(event);         
+    });
+
+    $('.button-modal').click(function(event){
+      event.preventDefault();
+      closePopup();
+      setTimeout(function(){
+            popup = document.querySelector('.js-modal-end');
+            close = popup.querySelector('.modal_close');     
+            popup.style.height = 'auto';         
+            var heightModal = $('.js-modal').height();
+            popup.style.marginTop = '-' + heightModal/2 + 'px';               
+            PopupShow(event);
+      }, 150); 
+               
     });
 
     function PopupShow(event) {
@@ -29,8 +38,7 @@ $(document).on('ready', function(){
           popup.classList.remove('zoomOut');
           popup_wrapper.classList.remove('fadeOut');
           popup.classList.add('show', 'zoomIn');
-          popup_wrapper.classList.add('show', 'fadeIn');
-          
+          popup_wrapper.classList.add('show', 'fadeIn');          
     };
    
 
@@ -41,8 +49,7 @@ $(document).on('ready', function(){
                 setTimeout(function(){
                       popup.classList.remove('show', 'zoomIn' );      
                       popup_wrapper.classList.remove('show', 'fadeIn');
-                }, 100);
-                
+                }, 100);                
           };
           
     }
@@ -54,8 +61,7 @@ $(document).on('ready', function(){
     });
 
     popup_wrapper.addEventListener('click', function(event) {
-          closePopup();
-          
+          closePopup();          
     });
  
     $('.modal_close').click(function(event) {
@@ -137,6 +143,15 @@ $(document).on('ready', function(){
           $('.navbar-tf').removeClass('scroll');       
       } 
       });
+      //при нажатии на ссылку
+$(".navbar-collapse a").click(function() {
+  //если она не имеет класс dropdown-toggle
+  if (!$(this).hasClass("dropdown-toggle")) {
+    //то закрыть меню
+    $(".navbar-collapse").collapse('hide');
+  }
+});
+$("a[rel=group]").fancybox();
 
   var owl1 = $('#owl-tiffany');
   
@@ -144,6 +159,8 @@ $(document).on('ready', function(){
           loop:true,//Зацикливаем слайдер
           margin:0,
           dots:false,
+          autoWidth:true,
+          nav:true,
           autoplayHoverPause: true, //Останавливает автопроигрывание если навести мышкой (hover) на элемент
           autoplay:false, //Автозапуск слайдера
           smartSpeed:1000, //Время движения слайда
@@ -152,24 +169,19 @@ $(document).on('ready', function(){
           responsive:{
                0:{
                    items:2,
-                   dots:true,
-                   nav:false
+                   dots:true
                },
                400:{
-                   items:3,
-                   nav:true
+                   items:3
                },
                600:{
-                   items:4,
-                   nav:true
+                   items:4
                },
                1070:{
-                  items:5,
-                  nav:true
+                  items:5
                 },
                1230:{
-                   items:5,
-                   nav:true
+                   items:5
                }
           }
       });

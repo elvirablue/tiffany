@@ -1,15 +1,11 @@
   
 $(document).on('ready', function(){ 
-//******************модальные окна для форм**************************************************
-
-     
+//******************модальные окна для форм**************************************************    
   
    
     var popup_wrapper = document.querySelector('.modal_wrapper');
     var popup;
-    var close;
-
-    
+    var close;    
    
     $('.js-btn-modal').click(function(event){
       event.preventDefault();
@@ -20,8 +16,21 @@ $(document).on('ready', function(){
       popup.style.height = 'auto';         
       var heightModal = $('.js-modal').height();
       popup.style.marginTop = '-' + heightModal/2 + 'px';               
-      PopupShow(event);
-         
+      PopupShow(event);         
+    });
+
+    $('.button-modal').click(function(event){
+      event.preventDefault();
+      closePopup();
+      setTimeout(function(){
+            popup = document.querySelector('.js-modal-end');
+            close = popup.querySelector('.modal_close');     
+            popup.style.height = 'auto';         
+            var heightModal = $('.js-modal').height();
+            popup.style.marginTop = '-' + heightModal/2 + 'px';               
+            PopupShow(event);
+      }, 150); 
+               
     });
 
     function PopupShow(event) {
@@ -29,8 +38,7 @@ $(document).on('ready', function(){
           popup.classList.remove('zoomOut');
           popup_wrapper.classList.remove('fadeOut');
           popup.classList.add('show', 'zoomIn');
-          popup_wrapper.classList.add('show', 'fadeIn');
-          
+          popup_wrapper.classList.add('show', 'fadeIn');          
     };
    
 
@@ -41,8 +49,7 @@ $(document).on('ready', function(){
                 setTimeout(function(){
                       popup.classList.remove('show', 'zoomIn' );      
                       popup_wrapper.classList.remove('show', 'fadeIn');
-                }, 100);
-                
+                }, 100);                
           };
           
     }
@@ -54,8 +61,7 @@ $(document).on('ready', function(){
     });
 
     popup_wrapper.addEventListener('click', function(event) {
-          closePopup();
-          
+          closePopup();          
     });
  
     $('.modal_close').click(function(event) {

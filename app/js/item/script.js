@@ -13,6 +13,15 @@ $(document).on('ready', function(){
           $('.navbar-tf').removeClass('scroll');       
       } 
       });
+      //при нажатии на ссылку
+$(".navbar-collapse a").click(function() {
+  //если она не имеет класс dropdown-toggle
+  if (!$(this).hasClass("dropdown-toggle")) {
+    //то закрыть меню
+    $(".navbar-collapse").collapse('hide');
+  }
+});
+$("a[rel=group]").fancybox();
 
   var owl1 = $('#owl-tiffany');
   
@@ -20,6 +29,8 @@ $(document).on('ready', function(){
           loop:true,//Зацикливаем слайдер
           margin:0,
           dots:false,
+          autoWidth:true,
+          nav:true,
           autoplayHoverPause: true, //Останавливает автопроигрывание если навести мышкой (hover) на элемент
           autoplay:false, //Автозапуск слайдера
           smartSpeed:1000, //Время движения слайда
@@ -28,24 +39,19 @@ $(document).on('ready', function(){
           responsive:{
                0:{
                    items:2,
-                   dots:true,
-                   nav:false
+                   dots:true
                },
                400:{
-                   items:3,
-                   nav:true
+                   items:3
                },
                600:{
-                   items:4,
-                   nav:true
+                   items:4
                },
                1070:{
-                  items:5,
-                  nav:true
+                  items:5
                 },
                1230:{
-                   items:5,
-                   nav:true
+                   items:5
                }
           }
       });

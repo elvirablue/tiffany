@@ -106,7 +106,7 @@
 		letter-spacing: 0.5px;
 		font-size: 14px;
 		height: 54px;
-		padding: 20px 40px;
+		padding: 20px 10px;
 	}
 	@media @mobil-widths{
 		padding: 0 20px 30px;
@@ -114,13 +114,20 @@
 }
 
 .modal__title {
-	.text-roboto(32px, 400);
+	.text-roboto(32px, 300);
 	padding: 60px 20px 20px;	
-	text-align: center;
-	font-weight: 300;
-
+	text-align: center;	
 	@media @mobil-widths {
 		font-size: 20px;
+	}
+}
+.modal__text {
+	.text-roboto(20px, 300);
+	padding: 30px 20px 80px;	
+	text-align: center;	
+	@media @mobil-widths {
+		font-size: 14px;
+		padding: 20px 10px 50px;
 	}
 }
 
