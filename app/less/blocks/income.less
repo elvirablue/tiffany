@@ -1,0 +1,36 @@
+.income {
+    .row {
+        padding-left: 270px;
+        padding-right: 270px;
+        @media @tablet-widths {padding: 0 60px;} 
+        @media @mobil-widths {padding: 0;} 
+    }
+    &__item {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        @media @mobil-widths {width: 250px;}
+        
+    }
+    &__img {
+        width: 100%;
+        height: 100px;
+        .bg-img(auto);
+        &.in1 {background-image: url(../img/d-1.png);}
+        &.in2 {background-image: url(../img/d-2.png);}
+        &.in3 {background-image: url(../img/d-3.png);}
+        @media @mobil-widths {float: left; width: 100px;}
+    }
+    &__title {
+        .text-cd(32px, 900);
+        line-height: 1;
+        @media @tablet-widths {font-size: 28px;}
+        @media @mobil-widths {font-size: 20px;padding-top: 30px; text-align: left;} 
+    }
+    &__subtitle {
+        .text-cd(18px, 400);
+        @media @tablet-widths {font-size: 16px;}
+        @media @mobil-widths {font-size: 14px; text-align: left;}
+        
+    }
+}

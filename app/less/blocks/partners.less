@@ -1,0 +1,31 @@
+.partners {
+    padding-top: 70px;
+    text-align: center;
+    .bg-img(auto);
+    background-image: url(../img/bg.png);
+    background-position: top right;
+    &__img {
+        text-align: center;
+    }
+    &__list {
+        padding-top: 20px;
+        @media @mobil-widths { padding-top: 0;} 
+        li {
+            .text-roboto(18px,300);
+            line-height: 1.2;
+            list-style: none;
+            padding-bottom: 15px;
+            &:before {
+                content: "";
+                display: block;
+                margin: 0 auto;
+                width: 20px;
+                height: 20px;
+                .bg-img(auto);
+                background-image: url(../img/ico/i-ok.png);
+            }
+            @media @tablet-widths { font-size: 16px} 
+            @media @mobil-widths {font-size: 14px} 
+        }
+    }
+}

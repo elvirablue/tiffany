@@ -1,0 +1,72 @@
+.main-footer {
+	position: relative;
+	padding: 0;		
+	height: @height-footer;
+	margin-top: -@height-footer;
+	@media @mobil-widths {
+		text-align: center;
+		height: @height-footer-mobil;
+		margin-top: -@height-footer-mobil;
+	}
+	hr {
+		color: #ffd988;
+		background-color: #ffd988;
+		height: 1px;
+		width: 100%;
+		border: none;
+		margin: 0 0 30px;
+		@media @mobil-widths {margin-bottom: 20px;}
+	}
+	.contacts {
+		padding-top: 0;	
+		@media @mobil-widths {padding-top: 20px;	}	
+		.phone {
+			text-align: right;
+			font-weight: 300;
+			display: block;
+			color: #000;
+			.text-roboto(18px, 400);
+			@media @tablet-widths {font-size: 16px;} 
+			@media @mobil-widths {
+				font-size: 14px;
+				text-align: center;
+			}
+		}
+	}
+	.index_logo {
+		width: 60px;
+		display: block;
+	}
+	.social {
+		display: block;
+		text-align: right;
+		padding-right: 70px;
+		padding-top: 20px;
+		@media @mobil-widths {
+			width: 100%;			
+			padding: 10px 0;
+		}
+		&-ico {
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			border: 1px solid #000;
+			border-radius: 50%;
+			background-position: center;
+			background-repeat: no-repeat;
+			margin: 0 15px;
+			@media @mobil-widths {margin: 0 0 0 20px;}
+		}
+		&-ico.vk {
+			background-image: url(../img/ico/i-vk.svg);
+			background-size: 22px auto;			
+		}
+		&-ico.inst {
+			background-image: url(../img/ico/i-inst.svg);
+			background-size: 20px auto;
+		}
+	}
+	
+}
+
+
