@@ -19,19 +19,7 @@ $(document).on('ready', function(){
       PopupShow(event);         
     });
 
-    $('.button-modal').click(function(event){
-      event.preventDefault();
-      closePopup();
-      setTimeout(function(){
-            popup = document.querySelector('.js-modal-end');
-            close = popup.querySelector('.modal_close');     
-            popup.style.height = 'auto';         
-            var heightModal = $('.js-modal').height();
-            popup.style.marginTop = '-' + heightModal/2 + 'px';               
-            PopupShow(event);
-      }, 150); 
-               
-    });
+    
 
     function PopupShow(event) {
           event.preventDefault();
@@ -92,16 +80,14 @@ $(document).ready(function() {
 			//yaCounter39173625.reachGoal('FormContact');
 //*************************************************************************************************
 
-			$('#exampleModal').arcticmodal({
-				beforeOpen: function(data, el) {
 					if ($('.modal').hasClass('show')) {
 						$('.modal').addClass('zoomOut');						
                   		$('.modal_wrapper').addClass('fadeOut');                  		
                         $('.modal').removeClass('show zoomIn');      
                         $('.modal_wrapper').removeClass('show fadeIn');                  		
-                 	}
-				}				
-    		});
+					 }
+					 $("#exampleModal").modal("show");
+				
 //
 		} else { return false; };
 

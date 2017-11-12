@@ -19,16 +19,14 @@ $(document).ready(function() {
 			//yaCounter39173625.reachGoal('FormContact');
 //*************************************************************************************************
 
-			$('#exampleModal').arcticmodal({
-				beforeOpen: function(data, el) {
 					if ($('.modal').hasClass('show')) {
 						$('.modal').addClass('zoomOut');						
                   		$('.modal_wrapper').addClass('fadeOut');                  		
                         $('.modal').removeClass('show zoomIn');      
                         $('.modal_wrapper').removeClass('show fadeIn');                  		
-                 	}
-				}				
-    		});
+					 }
+					 $("#exampleModal").modal("show");
+				
 //
 		} else { return false; };
 

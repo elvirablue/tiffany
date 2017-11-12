@@ -24,7 +24,6 @@ html {
   font-size: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 h2 {
   font-family: 'Georgia Bold', serif;
@@ -238,7 +237,7 @@ a {
   }
 }
 .main-footer .index_logo {
-  width: 60px;
+  width: 87px;
   display: block;
 }
 .main-footer .social {
@@ -689,6 +688,9 @@ a {
   margin: 0;
   margin-left: 0 !important;
 }
+.navbar-tf .navbar-brand .index_logo img {
+  max-width: 201px;
+}
 .navbar-tf .navbar-nav {
   display: -webkit-box;
   display: -webkit-flex;
@@ -764,9 +766,15 @@ a {
   width: 120px;
   height: auto;
 }
+.navbar-tf.scroll .navbar-brand .index_logo img {
+  max-width: 180px;
+}
 @media (max-width: 940px) {
   .navbar-tf.scroll .navbar-brand {
     padding-top: 10px;
+  }
+  .navbar-tf.scroll .navbar-brand .index_logo img {
+    max-width: 120px;
   }
 }
 .navbar-tf.scroll .navbar-nav,
@@ -1672,6 +1680,7 @@ a {
   font-size: 14px;
   height: 54px;
   padding: 20px 10px;
+  min-width: 200px;
 }
 @media (max-width: 767px) {
   .modal__form {
